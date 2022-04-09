@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jason Buzzell</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://cdn.rawgit.com">
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div data-video="F8bch5jiOkY" data-autoplay="1" data-loop="1" id="youtube-audio"></div>
+
+    <video autoplay muted loop id="lvck-bg">
+        <source src="../media/LVCK.mp4" type="video/mp4">
+    </video>
+
+    <div id="tv">
+        <div id="screen"></div>
+
+        <h1 id="name">Jason Buzzell</h1>
+    
+        <section id="buttons">
+    
+            <a href="javascript:delay('about.html', 3000)"><button>About</button></a>
+            <a href="javascript:delay('design.html', 3000)"><button>Design</button></a>
+            <a href="javascript:delay('coding.html', 3000)"><button>Coding</button></a>
+            <a href="javascript:delay('audio.html', 3000)"><button>Audio</button></a>
+            <a href="javascript:delay('music.html', 3000)"><button>Music</button></a>
+        </section>
+    
+        <a href="javascript:delay('https://www.youtube.com/watch?v=F8bch5jiOkY', 3000)"><button id='lvck-btn'>LVCK</button></a>
+    
+        <section id="sliders">
+            <input type="image" src="../media/speaker3.jpg" id="speaker" height="30" width="30" />
+            <input id="vol-control" type="range" value=70 min="0" max="100" step="1" oninput="SetVolume(this.value)"
+                onchange="SetVolume(this.value)" />
+            <div class="blink" id="vol-control-issue"> Under construction. </div>
+        </section>
+    </div>
+
+    <footer>
+        <script src="../js/main.js"></script>
+        <script src="https://www.youtube.com/iframe_api"></script>
+    </footer>
+</body>
+
+</html>

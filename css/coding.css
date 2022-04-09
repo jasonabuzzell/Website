@@ -1,0 +1,51 @@
+* {
+    margin:0 auto;
+    padding: 0;
+}
+
+body {
+    margin-top: 1em;
+    animation: fade-in 3s ease-in-out forwards;
+}
+
+h3 {
+    display: inline;
+    margin-left: 3vw;
+    font-size: 48px;
+    font-family: "Beau Rivage", cursive, sans-serif;
+}
+
+#buttons {
+    margin: 2vw;
+    display: inline;
+}
+
+button {
+    margin-right: 1em;
+    border: transparent;
+    background-color: transparent;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+button:hover {
+    color: red;
+}
+
+@keyframes fade-in {
+    0% {
+        background-color: #000;
+        opacity: 0%;
+    } 50% {
+        background-color: #fff;
+        opacity: 0%;
+    } 100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes fade-out {
+    100% {
+        background-color: #000;
+        opacity: 0%;
+    }
+}
