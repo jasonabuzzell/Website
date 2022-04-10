@@ -23,7 +23,7 @@ buttons.addEventListener('click', event => {
 });
 
 lvck_btn.addEventListener('click', event => {
-  video.src = "../media/LVCK2.mp4";
+  video.src = "Website/media/LVCK2.mp4";
 });
 
 function handleInputChange(e) {
@@ -48,7 +48,7 @@ document.getElementById('speaker').onclick = function () {
   if (speaker.src.includes("mute")) {
     SetVolume(val);
   } else {
-    speaker.src = "../media/speaker_mute.jpg";
+    speaker.src = "Website/media/speaker_mute.jpg";
     player.volume = 0;
   }
 }
@@ -56,13 +56,13 @@ document.getElementById('speaker').onclick = function () {
 function SetVolume(val) {
   player.volume = val / 100;
   if (val >= 70) {
-    speaker.src = "../media/speaker3.jpg";
+    speaker.src = "Website/media/speaker3.jpg";
   } else if (val >= 35) {
-    speaker.src = "../media/speaker2.jpg";
+    speaker.src = "Website/media/speaker2.jpg";
   } else if (val > 0) {
-    speaker.src = "../media/speaker1.jpg";
+    speaker.src = "Website/media/speaker1.jpg";
   } else {
-    speaker.src = "../media/speaker0.jpg";
+    speaker.src = "Website/media/speaker0.jpg";
   }
 }
 
