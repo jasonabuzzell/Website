@@ -2,15 +2,28 @@ const rangeInputs = document.querySelectorAll('#vol-control[type="range"]')
 
 const video = document.getElementById("lvck-bg");
 const speaker = document.getElementById('speaker');
-const player = document.getElementById('youtube-audio');
+const player = document.getElementById('lvck-audio');
 const issue = document.getElementById('vol-control-issue');
 const buttons = document.getElementById('buttons');
 const sliders = document.getElementById('sliders');
 const title = document.getElementById('name');
 const lvck_btn = document.getElementById('lvck-btn');
 
+player.src = "../media/LVCK_audio_" + String(Math.floor(4 * Math.random()) + 1) + ".mp3";
+player.play();
+
+player.addEventListener('ended', (event) => {
+  player.src = "../media/LVCK_audio_" + String(Math.floor(4 * Math.random()) + 1) + ".mp3";
+  player.play();
+})
+
 buttons.addEventListener('click', event => {
   video.style.animation = "fade-out 1s linear forwards";
+  setInterval(function () {
+    if (player.volume > 0.01) {
+      player.volume -= 0.01;
+    }
+  }, 20);
   setTimeout(function () {
     sliders.style.animation = "fade-out 1s linear forwards";
   }, 500);
@@ -74,28 +87,4 @@ function delay(URL, transition_time) {
   setTimeout(function () {
     window.location = URL;
   }, transition_time);
-}
-
-/* Taken and modified from "https://cdn.rawgit.com/labnol/files/master/yt.js" */
-function onYouTubeIframeAPIReady() {
-  var e = document.getElementById("youtube-audio"), t = document.createElement("img"); t.setAttribute("id", "youtube-icon"), t.style.cssText = "cursor:pointer;cursor:hand", e.appendChild(t);
-
-  var a = document.createElement("div");
-  a.setAttribute("id", "youtube-player"), e.appendChild(a);
-
-  e.onclick = function () {
-    r.getPlayerState() === YT.PlayerState.PLAYING || r.getPlayerState() === YT.PlayerState.BUFFERING ? (r.pauseVideo()) : (r.playVideo())
-  }
-
-  var r = new YT.Player("youtube-player", {
-    height: "0", width: "0", videoId: e.dataset.video, playerVars: {
-      autoplay: e.dataset.autoplay, loop: e.dataset.loop
-    }, events: {
-      onReady: function (e) {
-        r.setPlaybackQuality("small")
-      }, onStateChange: function (e) {
-        e.data === YT.PlayerState.ENDED && o(!1)
-      }
-    }
-  })
 }

@@ -4,7 +4,7 @@
 }
 
 body {
-    animation: fade-in 3s ease-in-out forwards;
+    animation: fade-in 1.5s ease-in-out forwards;
 }
 
 #banner {
@@ -73,9 +73,10 @@ button:hover {
     margin-top: 3vw;
     top: 7%;
     font-family: 'Cormorant Garamond', serif;
-    font-size: .88vw;
-    width: 50%;
-    color:#ddd;
+    font-size: 1.2vw;
+    text-indent: 2%;
+    width: 64%;
+    color:#f7f3eb;
 
     z-index: 1;
 }
@@ -88,9 +89,9 @@ button:hover {
 #background {
     opacity: 90%;
     min-height: 100%;
-    min-width: 1024px;
+    min-width: 100%;
 
-    width: 100%;
+    width: 1440px;
     height: auto;
 
     position: fixed;

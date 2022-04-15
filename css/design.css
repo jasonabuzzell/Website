@@ -1,23 +1,38 @@
 * {
-    margin:0 auto;
+    margin: 0 auto;
     padding: 0;
 }
 
 body {
-    margin-top: 1em;
-    animation: fade-in 3s ease-in-out forwards;
+    animation: fade-in 1s ease-in-out forwards;
+}
+
+#banner {
+    position: fixed;
+    background-color: #fff;
+    opacity: 80%;
+    top: 1vw;
+    width: 100%;
+    height: 3.4vw;
+    z-index: 1;
 }
 
 h3 {
+    position: fixed;
     display: inline;
-    margin-left: 3vw;
-    font-size: 48px;
+    top: 1vw;
+    left: 3%;
+    font-size: 3vw;
     font-family: "Beau Rivage", cursive, sans-serif;
+    z-index: 1;
 }
 
 #buttons {
-    margin: 2vw;
+    position: fixed;
+    top: 2.6vw;
+    left: 18%;
     display: inline;
+    z-index: 1;
 }
 
 button {
@@ -25,6 +40,8 @@ button {
     border: transparent;
     background-color: transparent;
     font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1.2vw;
+    z-index: 1;
 }
 
 button:hover {
@@ -35,10 +52,14 @@ button:hover {
     0% {
         background-color: #000;
         opacity: 0%;
-    } 50% {
+    }
+
+    50% {
         background-color: #fff;
         opacity: 0%;
-    } 100% {
+    }
+
+    100% {
         opacity: 100%;
     }
 }
@@ -48,4 +69,157 @@ button:hover {
         background-color: #000;
         opacity: 0%;
     }
+}
+
+#piano-slideshow {
+    left: 50%;
+    margin-top: 6%;
+    width: 50%;
+}
+
+#lvck-slideshow {
+    left: 50%;
+    margin-top: 10%;
+    width: 50%;
+}
+
+#clued-slideshow {
+    left: 50%;
+    margin-top: 10%;
+    width: 50%;
+}
+
+#piano-title {
+    font-family:'Square Peg', cursive;
+    font-size: 5vw;
+    text-align: center;
+    letter-spacing: 0.3em;
+    font-weight: 400;
+    color: #fff;
+}
+
+#lvck-title {
+    font-family: 'Beau Rivage', cursive;
+    font-size: 5vw;
+    text-align: center;
+    letter-spacing: 0.3em;
+    font-weight: 400;
+    color: #fff;
+}
+
+#clued-title {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 5vw;
+    text-align: center;
+    letter-spacing: 0.3em;
+    font-weight: 400;
+    color: #fff;
+}
+
+#piano-bio {
+    margin-top: 57%;
+    margin-bottom: 7%;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #bbb;
+    font-weight: bold;
+    font-size: 4vw;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 25%
+}
+
+#next-1,
+#prev-1 {
+    top: 62vw;
+}
+
+#next-2,
+#prev-2 {
+    top: 109vw;
+}
+
+#next-3,
+#prev-3 {
+    top: 158vw;
+}
+
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+#dots {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    width: 49%;
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.active {
+    background-color: #555;
+}
+
+.bio {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1vw;
+    color: #333;
+    left: 30%;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 1%;
+    color: #fbb;
+    background-color: rgba(0,0,0,0.5);
+}
+
+strong {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    margin-left: 0.5%;
+}
+
+#background {
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    width: 1440px;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(70%);
 }
