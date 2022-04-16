@@ -5,6 +5,8 @@
 
 body {
     animation: fade-in 1s ease-in-out forwards;
+    background-color: #000;
+    overflow: hidden;
 }
 
 #banner {
@@ -53,7 +55,6 @@ button:hover {
         background-color: #000;
         opacity: 0%;
     } 50% {
-        background-color: #fff;
         opacity: 0%;
     } 100% {
         opacity: 100%;
@@ -81,5 +82,7 @@ button:hover {
 }
 
 #videos {
-    margin: 5%;
+    position: fixed;
+    margin: 7%;
+    margin-left: 20%;
 }
