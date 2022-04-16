@@ -4,7 +4,7 @@
 }
 
 body {
-    animation: fade-in 1.5s ease-in-out forwards;
+    animation: fade-in 1s ease-in-out forwards;
 }
 
 #banner {
@@ -65,38 +65,4 @@ button:hover {
         background-color: #000;
         opacity: 0%;
     }
-}
-
-#bio {
-    position: fixed;
-    margin-left: 6vw;
-    margin-top: 3vw;
-    top: 7%;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2vw;
-    text-indent: 2%;
-    width: 64%;
-    color:#f7f3eb;
-
-    z-index: 1;
-}
-
-#work {
-    margin-left: 2vw;
-    z-index: 1;
-}
-
-#background {
-    opacity: 90%;
-    min-height: 100%;
-    min-width: 100%;
-
-    width: 1440px;
-    height: auto;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    z-index: 0;
 }

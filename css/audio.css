@@ -80,22 +80,6 @@ button:hover {
     z-index: 1;
 }
 
-#work {
-    margin-left: 2vw;
-    z-index: 1;
-}
-
-#background {
-    opacity: 90%;
-    min-height: 100%;
-    min-width: 1024px;
-
-    width: 100%;
-    height: auto;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    z-index: 0;
+#videos {
+    margin: 5%;
 }

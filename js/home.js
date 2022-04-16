@@ -10,7 +10,6 @@ const title = document.getElementById('name');
 const lvck_btn = document.getElementById('lvck-btn');
 
 player.src = "../media/LVCK_audio_" + String(Math.floor(4 * Math.random()) + 1) + ".mp3";
-player.play();
 
 player.addEventListener('ended', (event) => {
   player.src = "../media/LVCK_audio_" + String(Math.floor(4 * Math.random()) + 1) + ".mp3";
@@ -60,6 +59,7 @@ document.getElementById('speaker').onclick = function () {
 
   if (speaker.src.includes("mute")) {
     SetVolume(val);
+    player.play();
   } else {
     speaker.src = "../media/speaker_mute.jpg";
     player.volume = 0;
