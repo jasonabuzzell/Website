@@ -1,4 +1,4 @@
-const rangeInputs = document.querySelectorAll('#vol-control[type="range"]')
+const rangeInputs = document.querySelectorAll('#vol-control[type="range"]');
 
 const video = document.getElementById("lvck-bg");
 const speaker = document.getElementById('speaker');
@@ -8,6 +8,7 @@ const buttons = document.getElementById('buttons');
 const sliders = document.getElementById('sliders');
 const title = document.getElementById('name');
 const lvck_btn = document.getElementById('lvck-btn');
+const play = document.getElementById('play');
 
 player.src = "../media/LVCK_audio_" + String(Math.floor(4 * Math.random()) + 1) + ".mp3";
 
@@ -34,6 +35,16 @@ buttons.addEventListener('click', event => {
   }, 1500);
 });
 
+play.addEventListener('click', event => {
+  if (play.src.includes('play')) {
+    play.src = "../media/pause.png";
+    player.play();
+  } else {
+    play.src = "../media/play.png";
+    player.pause();
+  }
+})
+
 lvck_btn.addEventListener('click', event => {
   video.src = "../media/LVCK2.mp4";
 });
@@ -59,7 +70,6 @@ document.getElementById('speaker').onclick = function () {
 
   if (speaker.src.includes("mute")) {
     SetVolume(val);
-    player.play();
   } else {
     speaker.src = "../media/speaker_mute.jpg";
     player.volume = 0;

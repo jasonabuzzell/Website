@@ -101,6 +101,16 @@ button:active {
     color: blue;
 }
 
+#play {
+    position: absolute;
+    width: 2vw;
+    height: auto;
+    left: 35.5%;
+    top: 19.4vw;
+    color: green;
+    animation: blinker-button 3s ease infinite;
+}
+
 input[type="range"] {
     -webkit-appearance: none;
     margin-right: 15px;
