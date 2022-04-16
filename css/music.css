@@ -5,6 +5,13 @@
 
 body {
     animation: fade-in 1s ease-in-out forwards;
+    overflow: hidden;
+}
+
+#background {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
 }
 
 #banner {
@@ -67,35 +74,181 @@ button:hover {
     }
 }
 
-#slideshow {
+#music-gallery {
     position: fixed;
-    margin-left: 6vw;
-    margin-top: 3vw;
-    top: 7%;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2vw;
-    width: 64%;
-    color:#ddd;
-
+    display: inline;
+    top: 15%;
+    left: 5vw;
+    width: 50%;
+    height: 100%;
     z-index: 1;
 }
 
-#work {
-    margin-left: 2vw;
-    z-index: 1;
+#clued {
+    position: fixed;
+    width: 20%;
+    height: 80%;
 }
 
-#background {
-    opacity: 90%;
-    min-height: 100%;
-    min-width: 1024px;
-
-    width: 100%;
-    height: auto;
-
+#polychromatics {
+    display: inline;
     position: fixed;
-    top: 0;
-    left: 0;
+    width: 55%;
+    left: 40%;
+}
 
-    z-index: 0;
+#clued-title {
+    font-size: 5vw;
+    font-family: 'Cormorant Garamond', cursive;
+    font-weight: 300;
+    color: #fff;
+    margin-left: 20%;
+}
+
+#polychromatics-title {
+    font-size: 4.6vw;
+    margin-left: 15%;
+    font-family: 'Whisper', cursive;
+    color: #fff;
+    font-weight: 300;
+}
+
+#puppet-title {
+    position: absolute;
+    font-size: 3vw;
+    margin-left: 15%;
+    top: 40%;
+    left: 45%;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    font-weight: 300;
+    z-index: 2;
+}
+
+#clued-song {
+    z-index: 2;
+    margin-left: 19%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: #fff;
+    text-shadow: 2px 2px #333;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1vw;
+    font-weight: 300;
+}
+
+#poly-song {
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    z-index: 2;
+    margin-left: 19%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: #f66;
+    text-shadow: 2px 2px #a22;
+    background-color: rgba(0,0,0,0.5);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1vw;
+    font-weight: 300;
+}
+
+#spotify {
+    width: 50%;
+    height: 240;
+}
+
+#soundcloud {
+    position: absolute;
+    left: 65%;
+    top: 44.5%;
+}
+
+#clued-background {
+    position: absolute;
+    border: 2px solid #000;
+    height: 610px;
+    width: 140%;
+    z-index: -1;
+    opacity: 50%;
+    filter: brightness(50%);
+    opacity: 100%;
+    left: -30px;
+}
+
+#poly-background {
+    position:absolute;
+    z-index: -1;
+    left: 53%;
+    width: 32%;
+    height: 68%;
+}
+#clued-player {
+    margin-left: 17%;
+}
+
+#polychromatics-player {
+    position: absolute;
+    top: 40%;
+    left: 55%;
+}
+
+ul {
+    list-style-type: decimal;
+    margin-left: 5%;
+    height: 80%;
+    color: #ddd;
+    text-shadow: 1px 1px #000; 
+    background-color: transparent;
+}
+
+#polychromatics-list {
+    position:absolute;
+    left: 53%;
+    top: 58%;
+    color: #ddd;
+    text-shadow: 1px 1px #000; 
+}
+
+li {
+    border-bottom: 1px solid #a88;
+    background-color: transparent;
+    font-family:'Times New Roman', Times, serif;
+}
+
+input {
+    border: transparent;
+    background-color: transparent;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 550;
+    font-size: 150%;
+    outline: 1px #000;
+}
+
+.poly-input {
+    color: #fcc;
+    text-shadow: 2px 2px #a00;
+    background-color: rgba(0,0,0,0.5);
+}
+
+input:hover {
+    color:#faa;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0%;
+    } 100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 100%;
+    } 100% {
+        opacity: 0%;
+    }
 }
