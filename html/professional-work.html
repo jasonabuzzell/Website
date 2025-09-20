@@ -1,0 +1,212 @@
+<html>
+
+    <head>
+        <title>PROFESSIONAL WORK</title>
+        <link rel="stylesheet" type="text/css" href="../css/general.css">
+        <link rel="stylesheet" type="text/css" href="../css/professional-work.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="banner-placeholder"></div>
+
+        <div class="content">
+
+            <section class="content-item" id="content-item-civ7">
+                <section class="content-item-title">
+                    <div class="content-item-title-video-player">
+                        <video class="content-item-title-vid" autoplay muted src="../media/civ7logo.mp4"></video>
+                    </div>
+                    <p class="content-item-title-name"><em>Sid Meier's Civilization 7 (2025)</em></p>
+                    <p class="content-item-title-job">Audio Systems Engineer (2022-2025)</p>
+                    <p class="content-item-title-skills">(C++, C#, Python, Javascript, Typescript, SolidJS, Wwise 2019/2022)</p>
+                </section>
+
+                <section class="content-item-descript">
+                    <section class="content-item-descript-text" style="text-align: right">
+                        <p class="content-item-descript-name"><em>Animation (Continuous Combat)</em></p>
+                        <p class="content-item-descript-note"><em>Civilization 7</em> introduced Continuous Combat, where units continue fighting until the end of the turn.</p>
+                        <p class="content-item-descript-note">Even with the Continuous Triggers, Continuous Combat became a significantly noisy problem.</p>
+                        <p class="content-item-descript-note">To solve this, I started working on RTPCs (Real Time Parameter Control) for animation states, where our audio middleware was informed of what animation state or group any Unit game object was in (e.g. "COMBAT", "IDLE", "ATTENTION")</p>
+                        <p class="content-item-descript-note">With this, I could quiet down the game objects over time, so that the player was still aware of the fighting going on in the world, but reflecting that after a certain amount of time, it is not the center of their attention.</p>
+                        <p class="content-item-descript-note">Many other sounds were sculpted based on the animation state to reflect the importance of the animation (e.g. unit idling vs. unit moving)</p>
+                    </section>
+                    <section style="text-align: left">
+                        <video class="content-item-descript-vid" style="height: 400px;" controls src="../media/civ7continuouscombat.mp4"></video>
+                    </section>
+                </section>
+
+                <section class="content-item-descript">
+                    <section style="text-align: right">
+                        <video class="content-item-descript-vid" style="height: 400px;" controls src="../media/civ7continuoustriggers.mp4"></video>
+                    </section>
+                    <section class="content-item-descript-text" style="text-align: left">
+                        <p class="content-item-descript-name"><em>Animation (Continuous Triggers)</em></p>
+                        <p class="content-item-descript-note">In <em>Civilization 7</em>, the behaviour of animations was very complex, where they can cut in and out for different reasons at different times, thus desyncing or never firing SFX triggers (e.g. animation culling, random start times).</p>
+                        <p class="content-item-descript-note">This could lead to benign issues, like Leader VO not lining up with the animations, but sometimes it could result in "abandoned loops", where the looping SFXs never get stopped, becoming a cacophony of sound.</p>
+                        <p class="content-item-descript-note">To fix these issues, I created the Continuous Trigger, which solves multiple issues:</p>
+                        <p class="content-item-descript-note">1. If an animation stops playing for any reason (e.g. the player skips their animation, the unit goes offscreen, quick movement, etc.), the SFX will stop too.</p>
+                        <p class="content-item-descript-note">2. If an animation starts up randomly in its timeline, the SFX will sync up to the correct timing.</p>
+                        <p class="content-item-descript-note">3. If an animation loops but we don't want the sound to trigger again (e.g. when moving, some SFX events have both the movement start and loop in one event), setting the continuous trigger to the entire timeline solves that.</p>
+                        <p class="content-item-descript-note">This became the norm to handle looping animations, movement, and even VO animations (e.g. Leaders), because of its capabilities in handling itself and syncing.</p>
+                    </section>
+                </section>
+
+                <section class="content-item-descript">
+                    <section class="content-item-descript-text" style="text-align: right">
+                        <p class="content-item-descript-name"><em>VFX</em></p>
+                        <p class="content-item-descript-note">A personal favorite and rewarding system to work on!</p>
+                        <p class="content-item-descript-note">With the Gathering Storms expansion for <em>Civilization 6</em>, which reintroduced Natural Disasters to the franchise since <em>Civilization 1</em>, SFX needed to supported the VFX system from the start.</p>
+                        <p class="content-item-descript-note">In <em>Civilization 6</em>, this was done through animations, but that lead to not being to sync properly to VFX elements, instead just playing an approximation.</p>
+                        <p class="content-item-descript-note">This time, my work made it so audio designers could hook directly to VFX elements, so that they were triggered at the expected time, with the expected positioning.</p>
+                        <p class="content-item-descript-note">This became a showcase of Audio very quickly, and even features our work with Dolby Atmos and using height channels, to really accentuate the staggering size of these natural disasters, where lighting strikes from above.</p>
+                    </section>
+                    <section style="text-align: left">
+                        <video class="content-item-descript-vid" style="height: 400px;" controls src="../media/civ7vfx.mp4"></video>
+                    </section>
+                </section>
+
+                <section class="content-item-descript">
+                    <section style="text-align: right">
+                        <video class="content-item-descript-vid" style="height: 400px;" controls src="../media/civ7music.mp4"></video>
+                    </section>
+                    <section class="content-item-descript-text" style="text-align: left">
+                        <p class="content-item-descript-name"><em>Music</em></p>
+                        <p class="content-item-descript-note">The music system for <em>Civilization 7</em> is actually entirely new, for good reason.</p>
+                        <p class="content-item-descript-note">Normally in the <em>Civilization</em> franchise, the music worked with simple play-stop events, where a stop event would trigger the next track to play.</p>
+                        <p class="content-item-descript-note">This, however, led to a lot of issues, where the music could stop infinitely if the next track doesn't exist (<a href="https://forums.civfanatics.com/threads/bug-music-wont-play-after-first-track.682955/">forums.civfanatics.com</a>).</p>
+                        <p class="content-item-descript-note">Or, the music could fail to stop or send the event too early, thus resulting in multiple tracks playing (<a href="https://steamcommunity.com/app/289070/discussions/0/3887225762850608499/">steamcommunity.com</a>)</p>
+                        <p class="content-item-descript-note">So to address this issue, I created the music state machine, which solved many things:</p>
+                        <p class="content-item-descript-note">1. Only one track can play at a time, by nature of using global states.</p>
+                        <p class="content-item-descript-note">2. If a state doesn't exist, or if the track fails to play, it will automatically go to the next track.</p>
+                        <p class="content-item-descript-note">3. State machines also give us transition power, so we can shape the fading in and out of music to different sections however we want.</p>
+                        <p class="content-item-descript-note">There also was an issue with <em>Civilization 6</em> where content was leaked because people used a tool called "Wwiser" to reverse hash the names of Civilizations from the SFX events.</p>
+                        <p class="content-item-descript-note">I addressed this by encrypting the states for Civilization names with a certain prefix/suffix to make the reverse hashing virtually impossible, which I did by using Wwiser myself.</p>
+                    </section>
+                </section>
+
+                <section class="content-item-descript">
+                    <section class="content-item-descript-text" style="text-align: right">
+                        <p class="content-item-descript-name"><em>Sound Design</em></p>
+                        <p class="content-item-descript-note">Every so once in a while some sound designer would barge into my office and demand me to make random sounds, such as the crowd noises in-game, or the voice for the Radio Tower.</p>
+                        <p class="content-item-descript-note">But occassionally, I would sound design something of my own. Friedrich's whistling in-game is one of those examples.</p>
+                        <p class="content-item-descript-note">With the main menu music, if you select Friedrich as a Leader, his idle animation shows him whistling, which originally had no sound.</p>
+                        <p class="content-item-descript-note">Talking with the audio team, I went ahead and recorded the entire main menu with me whistling, added it as a track to the main menu music, and then unduck it in the animation when we starts whistling.</p>
+                        <p class="content-item-descript-note">One of the cooler initiatives with animation, and the fans seem to love it, so much so that they are banned from posting it anymore (<a href="https://www.reddit.com/r/civ/comments/1lfo1de/anyone_else_notice_friedrich_oblique_whistle/">reddit.com</a>)</p>
+                    </section>
+                    <section style="text-align: left">
+                        <video class="content-item-descript-vid" style="height: 400px;" controls src="../media/civ7sound.mp4"></video>
+                    </section>
+                </section>
+
+                <section class="content-item-descript">
+                    <section style="text-align: right">
+                        <video class="content-item-descript-vid" style="height: 400px;" controls src="../media/civ7script.mp4"></video>
+                    </section>
+                    <section class="content-item-descript-text" style="text-align: left">
+                        <p class="content-item-descript-name"><em>Scripting</em></p>
+                        <p class="content-item-descript-note">A large part of my work later into the project, this made a lot of our efforts possible, because of the sheer volume of SFX that we needed added or changed.</p>
+                        <p class="content-item-descript-note">What started as simple adding entries to XMLs, became querying our audio project for various parameters (e.g. streaming, inclusions), creating new objects, checking the validity of our assets, all in the same function.</p>
+                        <p class="content-item-descript-note">I found a particular joy in this work, because of how iterative testing was, and how quickly rewarding it was for sound designers.</p>
+                        <p class="content-item-descript-note">Instead of designers or engineers spending a day editing hundreds of raw strings for formatting, or just reading data files, scripting could alleviate that in a couple of seconds, and get people working on the important stuff again.</p>
+                        <p class="content-item-descript-note">The Tech and Civic tree is a perfect example of this; there are about 600 unique techs and civics in-game, and the sound designers wanted to make a sound for each one.</p>
+                        <p class="content-item-descript-note">While I couldn't help them with making each one, all they had to do was add the new sound to the Wwise project, and then I had a script that would make each event, hook up the event, generate and cook the assets, so they wouldn't have to do anymore.</p>
+                        <p class="content-item-descript-note">If it were up to me, this is the kind of work I would love to do.</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="content-item" id="content-item-civ6">
+                <section class="content-item-title">
+                    <div class="content-item-title-video-player">
+                        <video class="content-item-title-vid" autoplay muted src="../media/civ6logo.mp4"></video>
+                    </div>
+                    <p class="content-item-title-name"><em>Sid Meier's Civilization 6: Leader Pass (2022)</em></p>
+                    <p class="content-item-title-job">Jr. Audio Systems Engineer (2023)</p>
+                    <p class="content-item-title-skills">(C++, Wwise 2015)</p>
+                </section>
+
+                <section class="content-item-descript">
+                    <section class="content-item-descript-text" style="text-align: right">
+                        <p class="content-item-descript-name"><em>Implementation</em></p>
+                        <p class="content-item-descript-note">Worked on implementing DLC audio assets (VO, Music, etc.) into the game, testing and making sure nothing went awry.</p>
+                        <p class="content-item-descript-note">Worked with only one other Audio member (Audio QA) to make sure all audio worked, which meant a lot of responsibility.</p>
+                    </section>
+                    <section style="text-align: left">
+                        <video class="content-item-descript-vid" style="text-align: right" autoplay muted loop src="../media/civ6leader.mp4"></video>
+                    </section>
+                </section>
+
+                <section class="content-item-note" style="text-align: center">
+                    <p><em>This work was an interesting one, as I was brought in as the only Audio Engineer, thus handling 3 projects at the same time. I also lacked any information on this project beforehand, so it was... troublesome, to say the least.</em></p>
+                    <p><em>Regardless, the audio on this project was handled appropriately, the fans still love the title, and that's all I could ask for. I also learned a lot about our audio systems in <em>Civilization 6</em>, which inspired a lot of work for <em>Civilization 7</em>, such as the music system.</em></p>
+                </section>
+            </section>
+            
+            <section class="content-item" id="content-item-MMS">
+                <section class="content-item-title">
+                    <div class="content-item-title-video-player">
+                        <video class="content-item-title-vid" autoplay muted src="../media/mmslogo.mp4"></video>
+                    </div>
+                    <p class="content-item-title-name"><em>Marvel's Midnight Suns (2022)</em></p>
+                    <p class="content-item-title-job">Jr. Audio Systems Engineer (2022-2023)</p>
+                    <p class="content-item-title-skills">(C++, Unreal Engine 4, Blueprints, Wwise 2019)</p>
+                </section>
+
+                <section class="content-item-descript">
+                    <section class="content-item-descript-text" style="text-align: right">
+                        <p class="content-item-descript-name"><em>Unreal Engine 4 and Wwise 2019</em></p>
+                        <p class="content-item-descript-note"><em>Marvel's Midnight Suns</em> was made in Unreal Engine 4 with Wwise 2019, which came with certain pros and cons.</p>
+                        <p class="content-item-descript-note">For one, the Wwise 2019 integration with Unreal used an early form of EBP (Event-based Packaging), where runtime audio assets were split by event, not by the traditional bank.</p>
+                        <p class="content-item-descript-note">This means that, by base game, we had over 900,000 audio assets to handle, so particular processes, like Perforce source control, was often struggling.</p>
+                        <p class="content-item-descript-note">While the system was set in stone by the time I started working on <em>Marvel's Midnight Suns</em>, this actually inspired the work on <em>Civilization 7</em>'s custom EBP system, which I would say, works incredibly well. </p>
+                    </section>
+                    <section style="text-align: left">
+                        <video class="content-item-descript-vid"autoplay muted loop src="../media/mmsstake.mp4"></video>
+                    </section>
+                </section>
+
+                <section class="content-item-descript">
+                    <section style="text-align: right">
+                        <video class="content-item-descript-vid" autoplay muted loop src="../media/mmscrash.mp4"></video>
+                    </section>
+                    <section class="content-item-descript-text" style="text-align: left">
+                        <p class="content-item-descript-name"><em>Multiple Platform Support</em></p>
+                        <p class="content-item-descript-note"><em>Marvel's Midnight Suns</em> launched on Playstation 5, Xbox Series X and Windows at the same time, following up with Playstation 4 and Xbox One shortly after.</p>
+                        <p class="content-item-descript-note">Therefore, I quickly learned different platform development and testing, using tools such as Neighborhood for Playstation 5 or Xbox Game Developer to diagnose bugs or crashes.</p>
+                        <p class="content-item-descript-note">This taught me a lot of concepts of hardware and lower systems engineering, while also allowing me to communicate with other engineers in fields that I was not originally privy to.</p>
+                    </section>
+                </section>
+
+                <section class="content-item-descript">
+                    <section class="content-item-descript-text" style="text-align: right">
+                        <p class="content-item-descript-name"><em>Optimization</em></p>
+                        <p class="content-item-descript-note">This game was no joke, just by sheer volume! The amount of tools needed to test the two types of gameplay, Tactical and Strategy, was astounding.</p>
+                        <p class="content-item-descript-note">The free roam "Abbey" section was a behemoth for optimization, making sure I would have to test and analyze all sorts of situations and events in the environment for audio.</p>
+                        <p class="content-item-descript-note">Along with that, all sorts of bugs with reverb volumes and collision detection had to be resolved, but I think made for quite a nice sounding experience.</p>
+                    </section>
+                    <section style="text-align: left">
+                        <video class="content-item-descript-vid" controls src="../media/mmsenviron.mp4"></video>
+                    </section>
+                </section>
+
+                <section class="content-item-note" style="text-align: center">
+                    <p><em>When I started working as a Jr. Audio Systems Engineer on June 2022, this was the project I was first brought on. Didn't know lickety-split about Unreal, nor did I have any knowledge of what industry-standard audio systems looked like.</em></p>
+                    <p><em>Nor was there another Audio Engineer on the project. Truly a trial by fire. </em></p>
+                    <p><em>But the other audio and engineering members helped greatly, filling in the gaps of what I did or didn't know, and we got the game over the finish line.</em></p>
+                    <p><em>I learned a lot in a short period of time for this project, and it helped immensely with working under extreme pressure, so I do think fondly of the title. </em></p>
+                </section>
+            </section>
+
+            <br>
+        </div>
+
+        <script src="../js/general.js"></script>
+    </body>
+
+</html>

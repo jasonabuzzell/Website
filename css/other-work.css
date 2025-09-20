@@ -1,0 +1,24 @@
+#content-item-artivox {
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(24, 146, 24, 0.1) 0%, rgba(255,200,0,0) 50%),
+        radial-gradient(circle at 30% 40%, rgba(216, 241, 149, 0.096) 0%, rgba(255,255,40,0) 50%),
+        radial-gradient(circle at 70% 90%, rgba(114, 17, 17, 0.05) 0%, rgba(255,255,40,0) 50%),
+        linear-gradient(45deg, black, rgba(31, 58, 28, 0.308));
+    background-size: cover;
+}
+
+#content-item-piano {
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(158, 158, 158, 0.1) 0%, rgba(93, 110, 134, 0) 50%),
+        radial-gradient(circle at 80% 90%, rgba(31, 100, 49, 0.05) 0%, rgba(25, 70, 16, 0) 50%),
+        linear-gradient(45deg, black, rgba(12, 20, 39, 0.582));
+    background-size: cover;
+}
+
+#content-item-gitra {
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255,255,0,0.1) 0%, rgba(51, 42, 8, 0) 50%),
+        radial-gradient(circle at 80% 90%, rgba(255,255,40,0.05) 0%, rgba(185, 88, 22, 0.082) 50%),
+        linear-gradient(45deg, black, rgba(78, 66, 50, 0.514));
+    background-size: cover;
+}

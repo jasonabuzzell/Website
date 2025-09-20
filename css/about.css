@@ -1,121 +1,44 @@
-* {
-    margin:0 auto;
-    padding: 0;
+#content-item-about {
+    background-image: 
+        radial-gradient(circle at 10% 30%, rgba(153, 0, 255, 0.089) 0%, rgba(215, 132, 218, 0.027) 50%),
+        radial-gradient(circle at 40% 60%, rgba(240, 195, 70, 0.295) 0%, rgba(221, 149, 66, 0.068) 50%),
+        radial-gradient(circle at 70% 90%, rgba(92, 157, 255, 0.205) 0%, rgba(130, 102, 253, 0) 50%);
+    background-size: cover;
 }
 
-body {
-    animation: fade-in 1.5s ease-in-out forwards;
-}
-
-#banner {
-    position: fixed;
-    background-color:#fff;
-    opacity: 50%;
-    top: 1vw;
+#about-images {
+    display: inline-flex;
     width: 100%;
-    height: 3.4vw;
-    z-index: 1;
+    height: 200px;
+    margin-bottom:10px;
 }
 
-h3 {
-    position: fixed;
-    display: inline;
-    top: 1vw;
-    left: 3%;
-    font-size: 3vw;
-    font-family: "Beau Rivage", cursive, sans-serif;
-    z-index: 1;
+#about-images > * {
+    width:33%;
 }
 
-#buttons {
-    position: fixed;
-    top: 2.6vw;
-    left: 18%;
-    display: inline;
-    z-index: 1;
+#about-images * {
+    height:100%;
+    text-align:center;
 }
 
-button {
-    margin-right: 1em;
-    border: transparent;
-    background-color: transparent;
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 1.2vw;
-    z-index: 1;
+#linkedin-logo:hover {
+    opacity: 50%;
 }
 
-button:hover {
-    color: red;
+#linkedin-logo:active {
+    filter:brightness(200%);
 }
 
-@keyframes fade-in {
-    0% {
-        background-color: #000;
-        opacity: 0%;
-    } 50% {
-        background-color: #fff;
-        opacity: 0%;
-    } 100% {
-        opacity: 100%;
-    }
+.content-item-descript-name {
+    background-color: rgb(40, 40, 40);
 }
 
-@keyframes fade-out {
-    100% {
-        background-color: #000;
-        opacity: 0%;
-    }
+#content-item-info {
+    display: inline-flex;
+    width:100%;
 }
 
-#about {
-    position: fixed;
-    margin-left: 6vw;
-    margin-top: 3vw;
-    top: 5%;
-    font-family: 'Whisper', cursive;
-    font-weight: 300;
-    letter-spacing: 1vw;
-    font-size: 8vw;
-    width: 64%;
-    color:#f7f3eb;
-
-    z-index: 1;
-}
-
-#bio {
-    position: fixed;
-    margin-left: 6vw;
-    margin-top: 3vw;
-    top: 21%;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2vw;
-    text-indent: 2%;
-    width: 64%;
-    color:#f7f3eb;
-
-    z-index: 1;
-}
-
-#work {
-    margin-left: 2vw;
-    z-index: 1;
-}
-
-#background {
-    opacity: 90%;
-    min-height: 100%;
-    min-width: 100%;
-
-    width: 1440px;
-    height: auto;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    z-index: 0;
-}
-
-ul {
-    list-style:circle;
+#content-item-info > * {
+    text-align:center;
 }
