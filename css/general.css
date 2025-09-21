@@ -54,6 +54,7 @@ a {
 
 .content-item-title-video-player{
     position: relative;
+    overflow:hidden;
 }
 
 .content-item-title-video-player::before {
@@ -111,11 +112,13 @@ a {
 }
 
 .content-item-descript-vid {
-    height:300px;
+    height:400px;
+    width:100%;
 }
 
 .content-item-descript-img {
-    height:300px;
+    height:400px;
+    width:100%;
 }
 
 .content-item-descript-text {

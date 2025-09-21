@@ -20,6 +20,8 @@
 #about-images * {
     height:100%;
     text-align:center;
+    
+    overflow: hidden;
 }
 
 #linkedin-logo:hover {
@@ -37,8 +39,14 @@
 #content-item-info {
     display: inline-flex;
     width:100%;
+    
+    overflow: hidden;
 }
 
 #content-item-info > * {
     text-align:center;
+}
+
+#resume > * {
+    width:30%;
 }
