@@ -24,6 +24,11 @@
     overflow: hidden;
 }
 
+#firaxis-img {
+    width:100%;
+    max-width:300px;
+}
+
 #linkedin-logo:hover {
     opacity: 50%;
 }
