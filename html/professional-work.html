@@ -24,7 +24,7 @@
                     <div class="content-item-title-video-player">
                         <video class="content-item-title-vid" autoplay muted src="../media/civ7logo.mp4"></video>
                     </div>
-                    <p class="content-item-title-name"><em>Sid Meier's Civilization 7 (2025)</em></p>
+                    <p class="content-item-title-name"><em>Sid Meier's Civilization VII (2025)</em></p>
                     <p class="content-item-title-job">Audio Systems Engineer (2022-2025)</p>
                     <p class="content-item-title-skills">(C++, C#, Python, Javascript, Typescript, SolidJS, Wwise 2019/2022)</p>
                 </section>
@@ -32,7 +32,7 @@
                 <section class="content-item-descript">
                     <section class="content-item-descript-text" style="text-align: right">
                         <p class="content-item-descript-name"><em>Animation (Continuous Combat)</em></p>
-                        <p class="content-item-descript-note"><em>Civilization 7</em> introduced Continuous Combat, where units continue fighting until the end of the turn.</p>
+                        <p class="content-item-descript-note"><em>Civilization VII</em> introduced Continuous Combat, where units continue fighting until the end of the turn.</p>
                         <p class="content-item-descript-note">Even with the Continuous Triggers, Continuous Combat became a significantly noisy problem.</p>
                         <p class="content-item-descript-note">To solve this, I started working on RTPCs (Real Time Parameter Control) for animation states, where our audio middleware was informed of what animation state or group any Unit game object was in (e.g. "COMBAT", "IDLE", "ATTENTION")</p>
                         <p class="content-item-descript-note">With this, I could quiet down the game objects over time, so that the player was still aware of the fighting going on in the world, but reflecting that after a certain amount of time, it is not the center of their attention.</p>
@@ -49,7 +49,7 @@
                     </section>
                     <section class="content-item-descript-text" style="text-align: left">
                         <p class="content-item-descript-name"><em>Animation (Continuous Triggers)</em></p>
-                        <p class="content-item-descript-note">In <em>Civilization 7</em>, the behaviour of animations was very complex, where they can cut in and out for different reasons at different times, thus desyncing or never firing SFX triggers (e.g. animation culling, random start times).</p>
+                        <p class="content-item-descript-note">In <em>Civilization VII</em>, the behaviour of animations was very complex, where they can cut in and out for different reasons at different times, thus desyncing or never firing SFX triggers (e.g. animation culling, random start times).</p>
                         <p class="content-item-descript-note">This could lead to benign issues, like Leader VO not lining up with the animations, but sometimes it could result in "abandoned loops", where the looping SFXs never get stopped, becoming a cacophony of sound.</p>
                         <p class="content-item-descript-note">To fix these issues, I created the Continuous Trigger, which solves multiple issues:</p>
                         <p class="content-item-descript-note">1. If an animation stops playing for any reason (e.g. the player skips their animation, the unit goes offscreen, quick movement, etc.), the SFX will stop too.</p>
@@ -63,8 +63,8 @@
                     <section class="content-item-descript-text" style="text-align: right">
                         <p class="content-item-descript-name"><em>VFX</em></p>
                         <p class="content-item-descript-note">A personal favorite and rewarding system to work on!</p>
-                        <p class="content-item-descript-note">With the Gathering Storms expansion for <em>Civilization 6</em>, which reintroduced Natural Disasters to the franchise since <em>Civilization 1</em>, SFX needed to supported the VFX system from the start.</p>
-                        <p class="content-item-descript-note">In <em>Civilization 6</em>, this was done through animations, but that lead to not being to sync properly to VFX elements, instead just playing an approximation.</p>
+                        <p class="content-item-descript-note">With the Gathering Storms expansion for <em>Civilization VI</em>, which reintroduced Natural Disasters to the franchise since <em>Civilization 1</em>, SFX needed to supported the VFX system from the start.</p>
+                        <p class="content-item-descript-note">In <em>Civilization VI</em>, this was done through animations, but that lead to not being to sync properly to VFX elements, instead just playing an approximation.</p>
                         <p class="content-item-descript-note">This time, my work made it so audio designers could hook directly to VFX elements, so that they were triggered at the expected time, with the expected positioning.</p>
                         <p class="content-item-descript-note">This became a showcase of Audio very quickly, and even features our work with Dolby Atmos and using height channels, to really accentuate the staggering size of these natural disasters, where lighting strikes from above.</p>
                     </section>
@@ -79,7 +79,7 @@
                     </section>
                     <section class="content-item-descript-text" style="text-align: left">
                         <p class="content-item-descript-name"><em>Music</em></p>
-                        <p class="content-item-descript-note">The music system for <em>Civilization 7</em> is actually entirely new, for good reason.</p>
+                        <p class="content-item-descript-note">The music system for <em>Civilization VII</em> is actually entirely new, for good reason.</p>
                         <p class="content-item-descript-note">Normally in the <em>Civilization</em> franchise, the music worked with simple play-stop events, where a stop event would trigger the next track to play.</p>
                         <p class="content-item-descript-note">This, however, led to a lot of issues, where the music could stop infinitely if the next track doesn't exist (<a href="https://forums.civfanatics.com/threads/bug-music-wont-play-after-first-track.682955/">forums.civfanatics.com</a>).</p>
                         <p class="content-item-descript-note">Or, the music could fail to stop or send the event too early, thus resulting in multiple tracks playing (<a href="https://steamcommunity.com/app/289070/discussions/0/3887225762850608499/">steamcommunity.com</a>)</p>
@@ -87,7 +87,7 @@
                         <p class="content-item-descript-note">1. Only one track can play at a time, by nature of using global states.</p>
                         <p class="content-item-descript-note">2. If a state doesn't exist, or if the track fails to play, it will automatically go to the next track.</p>
                         <p class="content-item-descript-note">3. State machines also give us transition power, so we can shape the fading in and out of music to different sections however we want.</p>
-                        <p class="content-item-descript-note">There also was an issue with <em>Civilization 6</em> where content was leaked because people used a tool called "Wwiser" to reverse hash the names of Civilizations from the SFX events.</p>
+                        <p class="content-item-descript-note">There also was an issue with <em>Civilization VI</em> where content was leaked because people used a tool called "Wwiser" to reverse hash the names of Civilizations from the SFX events.</p>
                         <p class="content-item-descript-note">I addressed this by encrypting the states for Civilization names with a certain prefix/suffix to make the reverse hashing virtually impossible, which I did by using Wwiser myself.</p>
                     </section>
                 </section>
@@ -128,7 +128,7 @@
                     <div class="content-item-title-video-player">
                         <video class="content-item-title-vid" autoplay muted src="../media/civ6logo.mp4"></video>
                     </div>
-                    <p class="content-item-title-name"><em>Sid Meier's Civilization 6: Leader Pass (2022)</em></p>
+                    <p class="content-item-title-name"><em>Sid Meier's Civilization VI: Leader Pass (2022)</em></p>
                     <p class="content-item-title-job">Jr. Audio Systems Engineer (2023)</p>
                     <p class="content-item-title-skills">(C++, Wwise 2015)</p>
                 </section>
@@ -146,7 +146,7 @@
 
                 <section class="content-item-note" style="text-align: center">
                     <p><em>This work was an interesting one, as I was brought in as the only Audio Engineer, thus handling 3 projects at the same time. I also lacked any information on this project beforehand, so it was... troublesome, to say the least.</em></p>
-                    <p><em>Regardless, the audio on this project was handled appropriately, the fans still love the title, and that's all I could ask for. I also learned a lot about our audio systems in <em>Civilization 6</em>, which inspired a lot of work for <em>Civilization 7</em>, such as the music system.</em></p>
+                    <p><em>Regardless, the audio on this project was handled appropriately, the fans still love the title, and that's all I could ask for. I also learned a lot about our audio systems in <em>Civilization VI</em>, which inspired a lot of work for <em>Civilization VII</em>, such as the music system.</em></p>
                 </section>
             </section>
             
@@ -166,7 +166,7 @@
                         <p class="content-item-descript-note"><em>Marvel's Midnight Suns</em> was made in Unreal Engine 4 with Wwise 2019, which came with certain pros and cons.</p>
                         <p class="content-item-descript-note">For one, the Wwise 2019 integration with Unreal used an early form of EBP (Event-based Packaging), where runtime audio assets were split by event, not by the traditional bank.</p>
                         <p class="content-item-descript-note">This means that, by base game, we had over 900,000 audio assets to handle, so particular processes, like Perforce source control, was often struggling.</p>
-                        <p class="content-item-descript-note">While the system was set in stone by the time I started working on <em>Marvel's Midnight Suns</em>, this actually inspired the work on <em>Civilization 7</em>'s custom EBP system, which I would say, works incredibly well. </p>
+                        <p class="content-item-descript-note">While the system was set in stone by the time I started working on <em>Marvel's Midnight Suns</em>, this actually inspired the work on <em>Civilization VII</em>'s custom EBP system, which I would say, works incredibly well. </p>
                     </section>
                     <section style="text-align: left">
                         <video class="content-item-descript-vid"autoplay muted loop src="../media/mmsstake.mp4"></video>
